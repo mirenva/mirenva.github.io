@@ -1,0 +1,257 @@
+:root{
+    --theme-color: aquamarine;}
+* {
+	box-sizing: border-box;}
+html {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;}
+body {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+    background-color: #444;
+	color: #fff;}
+    @media (min-width: 1601px) {
+    	body {
+ 			font-size: 16px;}}
+    @media (max-width: 1600px) {
+    	body {
+ 			font-size: 14px;}}
+
+@media (max-width: 380px) {
+	h1 {
+		font-size: 1.5em;
+		line-height: 1.4;}
+	h2 {
+		font-size: 1.3em;}
+	h3 {
+		font-size: 1em;}}
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: .3s color linear;}
+	a:hover {
+		color: var(--theme-color);}
+::selection {
+	background: var(--theme-color);
+	color: #333;}
+::-moz-selection {
+	background: var(--theme-color);
+	color: #333;}
+.hidden {display:none}
+.overflow-y-hidden {
+	overflow-y: hidden;
+	padding-right: 17px;}
+
+.sidebar {
+    position: fixed;
+	display: flex;
+	background-color: #333;
+	color: #fff;
+	z-index: 1;}
+    @media (min-width: 1025px) {
+    	.sidebar {
+		    width: 20%;
+		    height: 100%;
+			flex-direction: column;
+		    padding: 0 20px;}}
+    @media (max-width: 1024px) {
+    	.sidebar {
+ 			width: 100%;
+			height: 60px;
+			flex-direction: row;
+			justify-content: space-between;}}
+    @media (max-width: 1024px) and (min-width: 381px) {
+    	.sidebar {
+			height: 60px;}}
+	@media (max-width: 380px) {
+		.sidebar {
+			height: 50px;}}
+    @media (max-width: 1024px) and (min-width: 321px) {
+    	.sidebar {
+			padding: 0 15px;}}
+	@media (max-width: 320px) {
+		.sidebar {
+			padding: 0 10px;}}
+	.sidebar__header {}
+	    @media (max-width: 1024px) {
+	    	.sidebar__header {
+				flex: 0 1 auto;}}
+		    @media (max-width: 1024px) {
+		    	.sidebar__init,
+		    	.sidebar__spec {
+					margin:0;}}
+	.nav {
+	    flex-direction: column;}
+	    @media (min-width: 1025px) {
+	    	.nav {
+	    		display: flex;}}
+	    @media (max-width: 1024px) {
+	    	.nav {
+	 			display: none;}}
+	    .nav__link {
+		    margin: 10px 0;}
+		.nav__link--active {
+    		color: var(--theme-color);}
+	.sidebar__footer {
+    	margin-top: auto;}
+	    @media (max-width: 1024px) {
+	    	.sidebar__footer {
+				display: none;}}
+	.device-contact {}
+	    @media (min-width: 1025px) {
+	    	.device-contact {
+	 			display: none;}}
+	    @media (max-width: 1024px) {
+	    	.device-contact {
+	 			height: 100%;
+	 			display: flex;
+				align-items: center;}}
+		.device-contact__link {
+		    margin: 0 5px;
+			border: 1px solid transparent;
+			transition: .3s border-color linear;}
+		    @media (min-width: 321px) {
+		    	.device-contact__link {
+		 			height: 80%;}}
+			@media (max-width: 320px) {
+				.device-contact__link {
+					height: 70%;}}
+			.device-contact__link:hover {
+				border-color: var(--theme-color);}
+		    .device-contact__img {
+    			max-height: 100%;}
+
+.main {}
+    @media (min-width: 1025px) {
+    	.main {
+ 			padding: 0 20px 0 calc( 20% + 20px );}}
+    @media (max-width: 1024px) and (min-width: 321px) {
+    	.main {
+ 			padding: 50px 15px 15px;}}
+	@media (max-width: 320px) {
+		.main {
+			padding: 50px 10px 15px;}}
+ 	.prolog {}
+	    @media (min-width: 1601px) {
+	    	.prolog {
+	 			max-width: 70%;}}
+	    @media (max-width: 1600px) and (min-width: 1025px) {
+	    	.prolog {
+	 			max-width: 90%;}}
+	    @media (max-width: 1024px) {
+	    	.prolog {
+	 			max-width: 100%;}}
+ 	.portfolio {
+	    display: flex;
+	    flex-wrap: wrap;
+		justify-content: space-between;
+	    margin-top: 30px;}
+	    @media (min-width: 1601px) {
+	    	.portfolio {
+	 			max-width: 70%;}}
+	    @media (max-width: 1600px) and (min-width: 1025px) {
+	    	.portfolio {
+	 			max-width: 90%;}}
+	    @media (max-width: 1024px) {
+	    	.portfolio {
+	 			max-width: 100%;}}
+	    .portfolio-item {
+			position: relative;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #666;
+			overflow: hidden;
+			text-align: right;}
+		    @media (min-width: 769px) {
+		    	.portfolio-item {
+		 			flex-basis: 49%;}}
+		    @media (max-width: 768px) {
+		    	.portfolio-item {
+		 			flex-basis: 100%;}}
+		    @media (min-width: 576px) {
+		    	.portfolio-item {
+		 			height: 200px;}}
+		    @media (max-width: 575px) {
+		    	.portfolio-item {
+		 			height: 150px;}}
+			.portfolio-item:hover {
+    			border-color: aquamarine;}
+			.portfolio-item__logo {
+			    position: absolute;
+				bottom: 10px;
+				left: 10px;
+			    max-width: 40%;}
+			.portfolio-item__name {
+			    font-size: 1.3em;
+			    font-weight: 400;}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100vh;
+	overflow-y: auto;
+    background-color: #333;
+	z-index: 1;
+    transition: 0.3s opacity linear;}
+.modal--active {
+	opacity: 1;
+	visibility: visible;}
+	.modal__close {
+	    position: absolute;
+	    top: 0;
+	    right: .5em;
+	    font-size: 3em;
+	    cursor: pointer;
+	    opacity: .5;
+	    transition: 0.3s opacity linear;}
+	    .modal__close:hover {
+   			opacity: 1;}
+   	.modal__content {
+	    margin: 0 auto;
+		padding-bottom: 15px;}
+	    @media (min-width: 1201px) {
+	    	.modal__content {
+	 			max-width: 50%;}}
+	    @media (max-width: 1200px) and (min-width: 769px) {
+	    	.modal__content {
+	 			max-width: 80%;}}
+	    @media (max-width: 768px) {
+	    	.modal__content {
+	 			max-width: 95%;}}
+	    .modal__table table {
+	    	max-width: 100%;
+		    border-spacing: 0;}
+		    .modal__table tr {}
+			    @media (max-width: 575px) {
+			    	.modal__table tr {
+			 			display: block;
+						padding: 10px;}}
+			    .modal__table tr:nth-child(2n+1) {
+		   			background-color: #444;}
+	   			.modal__table td {
+    				padding: 10px;
+    				vertical-align: top;}
+				    @media (max-width: 575px) {
+				    	.modal__table td {
+				 			display: block;
+							padding: 0;}
+						.modal__table td:first-child {
+						    margin-bottom: 1em;
+						    font-weight: bolder;}}
+    				.modal__table td p {
+    					margin-top: 0;}
+    				.modal__table td a {
+    					word-wrap: anywhere;
+					  	overflow-wrap: anywhere;
+						word-break: break-all;}

@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="ru">
+	
+	<head>
+		
+		<title>Транс Логистик Сервис &mdash; ж/д-перевозки</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+    	<base href="https://mirenva.github.io/project/trans-ls.ru/">
+		<link rel="icon" type="image/x-icon" href="app/img/favicon.ico" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="app/css/selectize.css">
+		<link rel="stylesheet" href="app/css/jquery-ui.min.css">
+		<link rel="stylesheet" href="app/css/jquery-ui.structure.min.css">
+		<link rel="stylesheet" href="app/css/jquery-ui.theme.min.css">
+		<link rel="stylesheet" href="app/css/master.css">
+		
+	</head>
+	
+	<body>
+		
+		<header class="header container">
+			
+			<div class="header__contacts">
+					
+				<a href="" class="header__logo">
+					<img src="app/img/logo-1.png" class="header__logo-image">
+				</a>
+				
+				<div class="header__contact  header__contact--adress">
+					<i class="fas  fa-map-marker-alt  header__contact-icon"></i>
+					<span class="header__contact-text">
+						ул.&nbsp;Байкальская, дом&nbsp;№252,<br>
+						корпус&nbsp;А, офис&nbsp;6
+					</span>
+				</div>
+				
+				<div class="header__contact  header__contact--phone">
+					<i class="fas  fa-phone  header__contact-icon  header__contact-icon--phone  d-none d-sm-inline-flex"></i>
+					<span class="header__contact-text">
+						<a href="tel:+7(3952)96-65-12" class="d-sm-none">
+							<i class="fas  fa-phone  header__contact-icon  header__contact-icon--phone  d-sm-none"></i>
+						</a>
+						<a href="tel:+7(3952)96-65-12" class="d-none d-sm-flex">+7&nbsp;<b>(3952)</b>&nbsp;96&#8209;65&#8209;12</a>
+						<a href="tel:+7(914)926-65-12" class="d-none d-lg-flex">+7&nbsp;<b>(914)</b>&nbsp;926&#8209;65&#8209;12</a>
+					</span>
+				</div>
+				
+				<div class="header__contact  header__contact--hours">
+					<i class="far  fa-clock  header__contact-icon"></i>
+					<span class="header__contact-text">
+						Часы работы:<br>
+						с&nbsp;10:00 до&nbsp;18:00
+					</span>
+				</div>
+				
+			</div>
+			
+			<div class="navbar navbar-expand-lg">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Развернуть меню">
+					<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+				</button>
+				
+				<nav class="nav-menu  nav-menu--header  collapse  navbar-collapse  navbar-nav" id="navbarContent">
+					
+					<div class="nav-menu__item  nav-item">
+						<a class="nav-menu__link" href="o-kompanii/">О компании</a>
+					</div>
+					<div class="nav-menu__item  nav-item">
+						<a class="nav-menu__link" href="avtoperevozki/">Автомобильные перевозки</a>
+					</div>
+					<div class="nav-menu__item  nav-item">
+						<a class="nav-menu__link" href="aviaperevozki/">Авиаперевозки</a>
+					</div>
+					<div class="nav-menu__item  nav-item">
+						<a class="nav-menu__link  nav-menu__link--active" href="#">Ж/д перевозки</a>
+					</div>
+					<div class="nav-menu__item  nav-item">
+						<a class="nav-menu__link" href="otslezhivanie-gruzov/">Отслеживание грузов</a>
+					</div>
+					
+				</nav>
+				
+			</div>
+			
+		</header>
+		
+		
+		
+		<section class="main-banner">
+		
+			<div class="container  main-banner__container  main-banner__container--services">
+				
+				<div class="main-banner__texts">
+					<span class="main-banner__text  main-banner__text--blue">Ж/д-перевозки</span>
+				</div>
+				
+				<div class="main-banner__pictures">
+					<img src="app/img/utp-all--train.png" class="main-banner__picture  d-lg-none">
+					<img src="app/img/utp-airplane--blur.png" class="main-banner__picture  main-banner__picture--airplane  d-none d-lg-block">
+					<img src="app/img/utp-train.png" class="main-banner__picture  main-banner__picture--train  d-none d-lg-block">
+					<img src="app/img/utp-car--blur.png" class="main-banner__picture  main-banner__picture--car  d-none d-lg-block">
+				</div>
+			
+			</div>
+				
+			<div class="main-banner__background">
+				<img class="main-banner__background-image" src="app/img/utp-back.png">
+				<img class="main-banner__bottom-angle" src="app/img/banner-bottom-white-line.png">
+			</div>
+			
+		</section>
+		
+		
+		
+		<section class="calculator container">
+			
+			<div class="calculator__heading">
+				<div class="heading">Расчёт</div>
+				<div class="heading  heading--sub">стоимости доставки</div>
+				<div class="calculator__heading-outer-angle"></div>
+			</div>
+			
+			
+			<div class="calculator__form  d-none d-lg-block">
+				
+				<div class="row">
+					
+					<div class="calculator__form-group  calculator__form-group--big">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Тип услуги</span>
+							<div class="calculator__select-wrapper">
+								<select class="calculator__field  calculator__field--select" name="type">
+									<option>Автоперевозки по межгороду</option>
+									<option>Здесь будут находиться</option>
+									<option>другие виды услуг,</option>
+									<option>которые вы должны</option>
+									<option>нам предоставить.</option>
+									<option>Отправьте их нам на почту</option>
+									<option>mail@topsite.studio</option>
+									<option>или help@topsite.studio</option>
+								</select>
+							</div>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group  calculator__form-group--big">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Город отправления</span>
+							<input class="calculator__field" type="text" name="city-from" placeholder="Откуда доставляется груз">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group  calculator__form-group--big">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Город назначения</span>
+							<input class="calculator__field" type="text" name="city-to" placeholder="Куда доставляется груз">
+						</label>
+					</div>
+					
+				</div>
+				
+				
+				<div class="row">
+					
+					<div class="calculator__form-group  calculator__form-group--small">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Дата отгрузки</span>
+							<input class="calculator__field  datepicker" type="text" name="date" placeholder="ДД/ММ/ГГГГ">
+							<i class="far  fa-calendar-alt calculator__field-icon"></i>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group  calculator__form-group--small">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Вес груза, кг</span>
+							<input class="calculator__field" type="text" name="weight" placeholder="Например, 300">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group  calculator__form-group--small">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Объём груза, м&sup3;</span>
+							<input class="calculator__field" type="text" name="volume" placeholder="Например, 20">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group calculator__result">
+						<div class="calculator__result-text">
+							Стоимость
+							<div class="calculator__price"><span id="calcPrice">3000</span>&nbsp;<i class="fas  fa-ruble-sign  calculator__price-icon"></i></div>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+				<div class="row">
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label  calculator__label--checkboxes">
+							<input class="calculator__checkbox" type="checkbox" name="delivery">
+							<span class="calculator__checkbox-icon"></span>
+							<span class="calculator__label-text  calculator__label-text--checkboxes">Доставка до двери в&nbsp;черте города</span>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label  calculator__label--checkboxes">
+							<input class="calculator__checkbox" type="checkbox" name="purchase">
+							<span class="calculator__checkbox-icon"></span>
+							<span class="calculator__label-text  calculator__label-text--checkboxes">Закуп груза</span>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group calculator__button-wrapper">
+						<button class="button ">Отправить заявку</button>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			
+			<div class="calculator__form  calculator__form--sm  d-lg-none">
+				
+				<div class="row">
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Тип услуги</span>
+							<div class="calculator__select-wrapper">
+								<select class="calculator__field  calculator__field--select" name="type">
+									<option>Автоперевозки по межгороду</option>
+									<option>Здесь будут находиться</option>
+									<option>другие виды услуг,</option>
+									<option>которые вы должны</option>
+									<option>нам предоставить.</option>
+									<option>Отправьте их нам на почту</option>
+									<option>mail@topsite.studio</option>
+									<option>или help@topsite.studio</option>
+								</select>
+							</div>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Город отправления</span>
+							<input class="calculator__field" type="text" name="city-from" placeholder="Откуда доставляется груз">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Город назначения</span>
+							<input class="calculator__field" type="text" name="city-to" placeholder="Куда доставляется груз">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Дата отгрузки</span>
+							<input class="calculator__field  datepicker" type="text" name="date" placeholder="ДД/ММ/ГГГГ">
+							<i class="far  fa-calendar-alt calculator__field-icon"></i>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Вес груза, кг</span>
+							<input class="calculator__field" type="text" name="weight" placeholder="Например, 300">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label">
+							<span class="calculator__label-text">Объём груза, м&sup3;</span>
+							<input class="calculator__field" type="text" name="volume" placeholder="Например, 20">
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label  calculator__label--checkboxes">
+							<input class="calculator__checkbox" type="checkbox" name="delivery">
+							<span class="calculator__checkbox-icon"></span>
+							<span class="calculator__label-text  calculator__label-text--checkboxes">Доставка до двери в&nbsp;черте города</span>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group">
+						<label class="calculator__label  calculator__label--checkboxes">
+							<input class="calculator__checkbox" type="checkbox" name="purchase">
+							<span class="calculator__checkbox-icon"></span>
+							<span class="calculator__label-text  calculator__label-text--checkboxes">Закуп груза</span>
+						</label>
+					</div>
+					
+					<div class="calculator__form-group calculator__result">
+						<div class="calculator__result-text">
+							Стоимость
+							<div class="calculator__price"><span id="calcPrice">3000</span>&nbsp;<i class="fas  fa-ruble-sign  calculator__price-icon"></i></div>
+						</div>
+					</div>
+					
+					<div class="calculator__form-group calculator__button-wrapper">
+						<button class="button ">Отправить заявку</button>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</section>
+		
+		
+		
+		<section class="steps">
+		
+			<div class="heading__wrapper  container">
+				<div class="heading">Этапы</div>
+				<div class="heading  heading--sub">доставки грузов</div>
+			</div>
+			
+			
+			<div class="background-gray-line  background-gray-line--steps">
+				<div class="backgroung-arrows-line"></div>
+			</div>
+			
+			
+			<div class="container">
+				
+				<div class="steps__wrapper  row">
+					
+					<div class="step  col-12  col-md-3">
+						<div class="step__num">1</div>
+						<div class="inner-heading">Звонок в&nbsp;компанию</div>
+						<p class="step__text">Вы&nbsp;<a href="tel:+7(914)926-65-12">звоните</a> или&nbsp;<a href="#">оставляете заявку</a>. Мы&nbsp;договариваемся о&nbsp;встрече, приезжаем и&nbsp;забираем груз, который нужно доставить</p>
+					</div>
+					
+					<div class="step  col-12  col-md-3">
+						<div class="step__num">2</div>
+						<div class="inner-heading">Оформление договора</div>
+						<p class="step__text">На&nbsp;месте встречи мы&nbsp;составляем смету и&nbsp;оформляем договор на&nbsp;оказание услуг перевозок. Сообщаем крайние сроки доставки</p>
+					</div>
+					
+					<div class="step  col-12  col-md-3">
+						<div class="step__num">3</div>
+						<div class="inner-heading">Груз в&nbsp;пути</div>
+						<p class="step__text">На&nbsp;протяжении всего пути груз передвигается аккуратно, без&nbsp;повреждений и&nbsp;в&nbsp;необходимых условиях. Доставка в&nbsp;срок</p>
+					</div>
+					
+					<div class="step  col-12  col-md-3">
+						<div class="step__num">4</div>
+						<div class="inner-heading">Груз доставлен</div>
+						<p class="step__text">Груз доставляется на&nbsp;указанное в&nbsp;договоре место. Мы&nbsp;сообщаем по&nbsp;указанным в&nbsp;договоре контактным данным о&nbsp;поступлении груза</p>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</section>
+		
+		
+		
+		<section class="recommendations">
+		
+			<div class="heading__wrapper  container">
+				<div class="heading">Мы рекомендуем</div>
+				<div class="heading  heading--sub">ж/д-доставку в таких случаях</div>
+			</div>
+			
+			
+			<div class="container">
+				
+				<div class="recomm__row  row  justify-content-start">
+					
+					<div class="recomm  col-12  col-md-6">
+						<div class="row  align-items-center  justify-content-center">
+							<div class="col-12  col-md-3">
+								<img class="recomm__icon" src="app/img/rec-1.png">
+							</div>
+							<div class="col-12  col-md-9">
+								<div class="inner-heading">Груз нужно доставить оперативно</div>
+								<p class="recomm__text">Здесь будет находиться текст с кратким описанием рекомендации, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="recomm__row  row  justify-content-end">
+					
+					<div class="recomm  col-12  col-md-6">
+						<div class="row  align-items-center  justify-content-center">
+							<div class="col-12  col-md-3">
+								<img class="recomm__icon" src="app/img/rec-2.png">
+							</div>
+							<div class="col-12  col-md-9">
+								<div class="inner-heading">Доставка по городу</div>
+								<p class="recomm__text">Здесь будет находиться текст с кратким описанием рекомендации, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="recomm__row  row  justify-content-start">
+					
+					<div class="recomm  col-12  col-md-6">
+						<div class="row  align-items-center  justify-content-center">
+							<div class="col-12  col-md-3">
+								<img class="recomm__icon" src="app/img/rec-3.png">
+							</div>
+							<div class="col-12  col-md-9">
+								<div class="inner-heading">Доставка по межгороду</div>
+								<p class="recomm__text">Здесь будет находиться текст с кратким описанием рекомендации, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="recomm__row  row  justify-content-end">
+					
+					<div class="recomm  col-12  col-md-6">
+						<div class="row  align-items-center  justify-content-center">
+							<div class="col-12  col-md-3">
+								<img class="recomm__icon" src="app/img/rec-4.png">
+							</div>
+							<div class="col-12  col-md-9">
+								<div class="inner-heading">Грузоподъёмность до 1,5 тонн</div>
+								<p class="recomm__text">Здесь будет находиться текст с кратким описанием рекомендации, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</section>
+		
+		
+		
+		<section class="directions  directions--service  container">
+		
+			<div class="heading__wrapper">
+				<div class="heading">Популярные</div>
+				<div class="heading  heading--sub">направления ж/д-доставки</div>
+			</div>
+			
+			<div class="dir-table  table  table-striped">
+				
+				<div class="dir-table__row">
+					<div class="dir-table__col  dir-table__col--direction">
+						<i class="fas  fa-map-marker-alt  dir-table__icon-marker"></i> Иркутск &mdash; Москва
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-train  dir-table__icon"></i> Ж/д-перевозки
+					</div>
+					<div class="dir-table__col">
+						<i class="far  fa-calendar-alt  dir-table__icon"></i> <span class="dir-table__bold">1</span> день
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-coins  dir-table__icon"></i> от <span class="dir-table__bold">3000</span> <i class="fas  fa-ruble-sign  dir-table__icon-ruble"></i>
+					</div>
+					<div class="dir-table__col">
+						<button class="button  dir-table__button">Отправить груз</button>
+					</div>
+				</div>
+				
+				<div class="dir-table__row">
+					<div class="dir-table__col  dir-table__col--direction">
+						<i class="fas  fa-map-marker-alt  dir-table__icon-marker"></i> Иркутск &mdash; Архангельск
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-train  dir-table__icon"></i> Ж/д-перевозки
+					</div>
+					<div class="dir-table__col">
+						<i class="far  fa-calendar-alt  dir-table__icon"></i> <span class="dir-table__bold">12</span> дней
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-coins  dir-table__icon"></i> от <span class="dir-table__bold">5000</span> <i class="fas  fa-ruble-sign  dir-table__icon-ruble"></i>
+					</div>
+					<div class="dir-table__col">
+						<button class="button  dir-table__button">Отправить груз</button>
+					</div>
+				</div>
+				
+				<div class="dir-table__row">
+					<div class="dir-table__col  dir-table__col--direction">
+						<i class="fas  fa-map-marker-alt  dir-table__icon-marker"></i> Иркутск &mdash; Архангельск
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-train  dir-table__icon"></i> Ж/д-перевозки
+					</div>
+					<div class="dir-table__col">
+						<i class="far  fa-calendar-alt  dir-table__icon"></i> <span class="dir-table__bold">12</span> дней
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-coins  dir-table__icon"></i> от <span class="dir-table__bold">5000</span> <i class="fas  fa-ruble-sign  dir-table__icon-ruble"></i>
+					</div>
+					<div class="dir-table__col">
+						<button class="button  dir-table__button">Отправить груз</button>
+					</div>
+				</div>
+				
+				<div class="dir-table__row">
+					<div class="dir-table__col  dir-table__col--direction">
+						<i class="fas  fa-map-marker-alt  dir-table__icon-marker"></i> Иркутск &mdash; Архангельск
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-train  dir-table__icon"></i> Ж/д-перевозки
+					</div>
+					<div class="dir-table__col">
+						<i class="far  fa-calendar-alt  dir-table__icon"></i> <span class="dir-table__bold">12</span> дней
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-coins  dir-table__icon"></i> от <span class="dir-table__bold">5000</span> <i class="fas  fa-ruble-sign  dir-table__icon-ruble"></i>
+					</div>
+					<div class="dir-table__col">
+						<button class="button  dir-table__button">Отправить груз</button>
+					</div>
+				</div>
+				
+				<div class="dir-table__row">
+					<div class="dir-table__col  dir-table__col--direction">
+						<i class="fas  fa-map-marker-alt  dir-table__icon-marker"></i> Иркутск &mdash; Архангельск
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-train  dir-table__icon"></i> Ж/д-перевозки
+					</div>
+					<div class="dir-table__col">
+						<i class="far  fa-calendar-alt  dir-table__icon"></i> <span class="dir-table__bold">12</span> дней
+					</div>
+					<div class="dir-table__col">
+						<i class="fas  fa-coins  dir-table__icon"></i> от <span class="dir-table__bold">5000</span> <i class="fas  fa-ruble-sign  dir-table__icon-ruble"></i>
+					</div>
+					<div class="dir-table__col">
+						<button class="button  dir-table__button">Отправить груз</button>
+					</div>
+				</div>
+				
+			</div>
+			
+		</section>
+		
+		
+		
+		<section class="faq  faq--service  container">
+		
+			<div class="heading__wrapper">
+				<div class="heading">Вопросы,</div>
+				<div class="heading  heading--sub">которые возникают при ж/д-перевозке</div>
+			</div>
+			
+			<div class="row">
+			
+				<div class="faq__content  col-12  col-lg-9">
+					
+					<div class="tab-content  faq__tabs-content">
+						
+						<div class="tab-pane  fade  show  active" id="byavia" role="tabpanel" aria-labelledby="byavia-tab">
+							
+							<div class="faq-accordion" id="faqAvia">
+		
+								<div class="faq__item">
+									<div class="faq__question" id="faq-avia-ques-1" type="button" data-toggle="collapse" data-target="#faq-avia-answ-1" aria-expanded="true" aria-controls="faq-avia-answ-1">
+										<i class="fas  fa-angle-right  faq__question-icon"></i> Какие вопросы нужно сюда поставить?
+									</div>
+									<div class="collapse  show  faq__answer" id="faq-avia-answ-1" aria-labelledby="faq-avia-ques-1" data-parent="#faqAvia">
+										Здесь будет находиться ответ на заданный выше вопрос, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio. Здесь будет находиться ответ на заданный выше вопрос, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.
+									</div>
+								</div>
+								
+								<div class="faq__item">
+									<div class="faq__question" id="faq-avia-ques-2" type="button" data-toggle="collapse" data-target="#faq-avia-answ-2" aria-expanded="false" aria-controls="faq-avia-answ-2">
+										<i class="fas  fa-angle-right  faq__question-icon"></i> Отправьте их нам на почту
+									</div>
+									<div class="collapse  faq__answer" id="faq-avia-answ-2" aria-labelledby="faq-avia-ques-2" data-parent="#faqAvia">
+										Здесь будет находиться ответ на заданный выше вопрос, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio. Здесь будет находиться ответ на заданный выше вопрос, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.
+									</div>
+								</div>
+								
+								<div class="faq__item">
+									<div class="faq__question" id="faq-avia-ques-3" type="button" data-toggle="collapse" data-target="#faq-avia-answ-3" aria-expanded="false" aria-controls="faq-avia-answ-3">
+										<i class="fas  fa-angle-right  faq__question-icon"></i> mail@topsite.studio или help@topsite.studio
+									</div>
+									<div class="collapse  faq__answer" id="faq-avia-answ-3" aria-labelledby="faq-avia-ques-3" data-parent="#faqAvia">
+										Здесь будет находиться ответ на заданный выше вопрос, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio. Здесь будет находиться ответ на заданный выше вопрос, который вы должны нам предоставить. Отправьте текст нам на почту mail@topsite.studio или help@topsite.studio.
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="faq__form  col-12  col-lg-3">
+					
+					<div class="faq__form-heading-wrapper">
+						<div class="faq__form-heading">Не нашли ответ?</div>
+						<div class="faq__form-heading  faq__form-heading--sub">Задайте свой вопрос</div>
+					</div>
+					
+					<form class="faq-form">
+						<input class="faq-form__field" type="text" name="name" placeholder="Ваше имя">
+						<input class="faq-form__field" type="tel" name="phone" placeholder="Ваш телефон">
+						<textarea class="faq-form__field" name="answer" placeholder="Ваш вопрос . . ."></textarea>
+						<label class="faq-form__checkbox-label">
+							<input class="faq-form__checkbox" type="checkbox" name="opd">
+							<span class="faq-form__checkbox-icon"></span> Я даю согласие на&nbsp;<a href="app/static/soglasie_opd.pdf" target="_blank">обработку своих персональных данных</a>
+						</label>
+						<button class="button  faq-form__button" type="submit">Задать свой вопрос</button>
+					</form>
+					
+				</div>
+			
+			</div>
+			
+		</section>
+		
+		
+		
+		<section class="map">
+			
+			<img class="map__top-line" src="app/img/map-top-white-line.png">
+			<div class="yandex-map" id="mainMap"><!-- разметка для балуна лежит в master.js --></div>
+			
+		</section>
+		
+		
+		
+		<footer class="footer">
+			
+			<nav class="nav-menu  container">
+				
+				<div class="nav-menu__item">
+					<a href="o-kompanii/">О компании</a>
+				</div>
+				<div class="nav-menu__item">
+					<a href="avtoperevozki/">Автомобильные перевозки</a>
+				</div>
+				<div class="nav-menu__item">
+					<a href="aviaperevozki/">Авиаперевозки</a>
+				</div>
+				<div class="nav-menu__item">
+					<a href="#">Ж/д перевозки</a>
+				</div>
+				<div class="nav-menu__item">
+					<a href="otslezhivanie-gruzov/">Отслеживание грузов</a>
+				</div>
+				
+			</nav>
+			
+			<div class="footer__copyright">
+				&copy; «Транс Логистик Сервис», 2019<br>
+				<noindex>Разработка &mdash; <a href="http://topsite38.ru/" target="_blank" rel="nofollow">TOPSITE.STUDIO</a></noindex>
+			</div>
+			
+		</footer>
+		
+		
+		
+		<script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script src="app/js/selectize.min.js"></script>
+		<script src="app/js/jquery-ui.min.js"></script>
+		
+		<script src="app/js/master.js"></script>
+		
+	</body>
+
+</html>

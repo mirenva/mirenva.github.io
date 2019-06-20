@@ -1,0 +1,106 @@
+.selectize-control {
+	position: relative;
+}
+.selectize-input {
+	position: relative;
+	z-index: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+}
+.selectize-input.disabled,
+.selectize-input.disabled * {
+	cursor: default !important;
+}
+.selectize-input > * {
+	zoom: 1;
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+.selectize-input > input {
+	display: inline-block !important;
+	padding: 0 !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	max-width: 100% !important;
+	margin: 0 2px 0 0 !important;
+	text-indent: 0 !important;
+	border: 0 none !important;
+	background: none !important;
+	line-height: inherit !important;
+	-webkit-user-select: auto !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	visibility: hidden;
+}
+.selectize-input > input::-ms-clear {
+	display: none;
+}
+.selectize-input > input:focus {
+	outline: none !important;
+}
+.selectize-dropdown {
+	position: absolute;
+	z-index: 10;
+}
+.selectize-dropdown [data-selectable] {
+	cursor: pointer;
+	overflow: hidden;
+}
+.selectize-dropdown .option,
+.selectize-dropdown .optgroup-header {
+	padding: 5px 8px;
+}
+.selectize-dropdown .option,
+.selectize-dropdown [data-disabled],
+.selectize-dropdown [data-disabled] [data-selectable].option {
+	cursor: inherit;
+	opacity: 0.5;
+}
+.selectize-dropdown [data-selectable].option {
+	opacity: 1;
+}
+.selectize-dropdown .active {
+    background-color: #5a7af5;
+    border-radius: 10px;
+}
+.selectize-dropdown-content {
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+	cursor: pointer;
+}
+.selectize-control.single .selectize-input:after {
+	content: "\f107";
+	font-family: "Font Awesome 5 Free";
+	padding: 0 8px;
+	font-size: 1.5em;
+	position: absolute;
+	right: 0;
+	top: 0.5em;
+	z-index: 1;
+	text-align: center;
+	width: 10%;
+	pointer-events: none;
+	box-sizing: border-box;
+	color: #fff;
+	transition: .3s;
+	font-weight: 600;
+}
+@media(max-width:575px) {
+	.selectize-control.single .selectize-input:after {
+		top: 0.6em;
+	}
+}
+.selectize-control.single .selectize-input.dropdown-active:after {
+	transform: scale(1,-1);
+}
+.selectize-control .selectize-input.disabled {
+	opacity: 0.5;
+	background-color: #fafafa;
+}
