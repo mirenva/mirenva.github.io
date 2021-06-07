@@ -21,13 +21,15 @@
 			const placemarkOffice = new ymaps.Placemark([55.814689568919476,37.45588450000001], {
 				title: 'ОФИС',
 				address: 'Москва, ул. Габричевского, д. 5, корп. 1',
+				phone: '+7 (495) 234-82-46<br>+7 (495) 234-82-37',
 				worktime: 'ПН—ПТ с 9:00 до 17:00 часов. СБ—ВС выходной',
-			}, {iconLayout: layoutOffice, iconOffset: [0, -100]});
+			}, {iconLayout: layoutOffice, iconOffset: [-10,-42]});
 
-			const placemarkStorage = new ymaps.Placemark([55.96011949677388,37.54906249999998], {
+			const placemarkStorage = new ymaps.Placemark([55.95417464439348,37.54063863485712], {
 				title: 'СКЛАД',
+				phone: '+7 (495) 234-82-46<br>+7 (495) 234-82-37',
 				address: 'МО, Мытищинский район, д. Грибки<br>(5 км. от МКАД по Дмитровскому шоссе)',
-			}, {iconLayout: layoutStorage, iconOffset: [0, -100]});
+			}, {iconLayout: layoutStorage, iconOffset: [-10,-42]});
 
 			opalubkaMap.geoObjects.add(placemarkOffice);
 			opalubkaMap.geoObjects.add(placemarkStorage);
@@ -48,6 +50,9 @@ function getContentLayoutOffice() {
 				'<div class="map-mark__text map-mark__text--address">' +
 					'{{ properties.address | raw }}' +
 				'</div>' +
+				'<div class="map-mark__text map-mark__text--phone">' +
+					'{{ properties.phone | raw }}' +
+				'</div>' +
 				'<div class="map-mark__text map-mark__text--worktime">' +
 					'{{ properties.worktime | raw }}' +
 				'</div>' +
@@ -65,6 +70,9 @@ function getContentLayoutStorage() {
 			'<div class="map-mark__right">' +
 				'<div class="map-mark__text map-mark__text--title">' +
 					'<b>{{ properties.title | raw }}</b>' +
+				'</div>' +
+				'<div class="map-mark__text map-mark__text--phone">' +
+				'{{ properties.phone | raw }}' +
 				'</div>' +
 				'<div class="map-mark__text map-mark__text--address">' +
 					'{{ properties.address | raw }}' +

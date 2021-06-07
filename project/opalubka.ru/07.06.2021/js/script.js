@@ -244,17 +244,19 @@
 	//Accordion Box
 	if($('.accordion-box').length){
 		$(".accordion-box").on('click', '.acc-btn', function() {
-			
 			var outerBox = $(this).parents('.accordion-box');
 			var target = $(this).parents('.accordion');
 			
-			if($(this).hasClass('active')!==true){
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+			} else {
 				$(outerBox).find('.accordion .acc-btn').removeClass('active');
 			}
 			
-			if ($(this).next('.acc-content').is(':visible')){
-				return false;
-			}else{
+			if ($(this).next('.acc-content').is(':visible')) {
+				$(outerBox).children('.accordion').removeClass('active-block');
+				$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
+			} else {
 				$(this).addClass('active');
 				$(outerBox).children('.accordion').removeClass('active-block');
 				$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
@@ -272,8 +274,6 @@
 			loop:true,
 			margin:30,
 			nav:true,
-			// smartSpeed: 500,
-			// autoplay: 8000,
 			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
 			responsive:{
 				0:{
