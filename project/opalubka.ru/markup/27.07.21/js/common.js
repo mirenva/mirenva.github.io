@@ -36,8 +36,6 @@ $((function() {
             clickable: !0
         }
     });
-    $(".accordion__content").eq(0).stop(!0, !0).slideToggle("50");
-    $(".accordion__item").eq(0).addClass("accordion__item--active");
     $(".accordion__title").click((function() {
         var $this = $(this);
         $this.next(".accordion__content").stop(!0, !0).slideToggle("50");
