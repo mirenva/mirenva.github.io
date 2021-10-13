@@ -33,8 +33,16 @@
     <body class="home">
         <div class="wrapper">
             <div class="preloader"></div>
-            <header class="header ">
-                <div class="header__top">
+            <header class="header">
+                <div class="header__background"></div>
+                <div class="header__mobile-logo">
+                    <div class="container">
+                        <a class="logo" href="#">
+                            <img src="img/general/logo.png" alt="alternate text for image"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__top js-main-menu-nav">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -75,14 +83,40 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="header__mid-box">
-                                    <div class="toggle-btn">
+                                    <div class="toggle-btn js-toggle-main-menu">
                                         <div class="main-menu-burger js-main-menu-burger">
                                             <span></span>
                                         </div>
+                                        <div class="toggle-btn__title js-main-menu-burger-title">Меню</div>
                                     </div>
+
                                     <a class="logo" href="#">
                                         <img src="img/general/logo.png" alt="alternate text for image"/>
                                     </a>
+
+                                    <div class="mobile-contacts-list">
+                                        <a class="mobile-contact mobile-contact--wa" target="_blank" href="https://wa.me/79779221477">
+                                            <svg class="svg svg--phone ">
+                                                <use xlink:href="img/svg/symbol/sprite.svg#wa"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="mobile-contact mobile-contact--tg" target="_blank" href="https://telegram.me/mgrtt">
+                                            <svg class="svg svg--phone ">
+                                                <use xlink:href="img/svg/symbol/sprite.svg#tg-outline"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="mobile-contact mobile-contact--phone" href="tel:+74952348246">
+                                            <svg class="svg svg--phone ">
+                                                <use xlink:href="img/svg/symbol/sprite.svg#phone-outline"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="mobile-contact mobile-contact--mail" href="mailto:7296118@mail.ru">
+                                            <svg class="svg svg--phone ">
+                                                <use xlink:href="img/svg/symbol/sprite.svg#envelope"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+
                                     <div class="main-phones">
                                         <a class="main-phones__item" href="tel:+74952348246">
                                             <svg class="svg svg--phone ">
@@ -97,13 +131,11 @@
                                             <span class="main-phones__item-box">Отдел продаж опалубки<b>+7 (495) 234-82-37</b></span>
                                         </a>
                                     </div>
-                                    <div class="toggle-btn">
-                                        <div class="catalog-menu-burger">
-                                            <svg height="512" viewBox="-16 0 384 384" width="512"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M320 0H0v384h320V160h32v-32h-32V96h32V64h-32zm-32 32v32h-32V32zm-64 320H32V32h192zm64-224v224h-32V96h32zm0 0"/>
-                                                <path d="M64 158.71V272h128V158.71l-64-51.198zM160 240H96v-65.91l32-25.594 32 25.594zm0 0"/>
-                                            </svg>
+
+                                    <div class="toggle-btn js-toggle-catalog-menu">
+                                        <div class="toggle-btn__title js-catalog-menu-burger-title">Каталог</div>
+                                        <div class="catalog-menu-burger js-catalog-menu-burger">
+                                            <span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="catalog-nav">
+                <div class="catalog-nav js-catalog-menu-nav">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -121,10 +153,10 @@
                                     </a>
                                     <ul class="navigation">
                                         <li class="dropdown has-mega-menu">
-                                            <a href="#">Аренда опалубки</a>
+                                            <a href="/test">Аренда опалубки</a>
                                             <div class="mega-menu">
                                                 <div class="mega-menu-bar">
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Аренда опалубки стен</a>
                                                         </h3>
@@ -143,7 +175,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Аренда опалубки перекрытий</a>
                                                         </h3>
@@ -173,7 +205,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Аренда опалубки колонн</a>
                                                         </h3>
@@ -205,7 +237,7 @@
                                             <a href="#">Продажа опалубки</a>
                                             <div class="mega-menu">
                                                 <div class="mega-menu-bar">
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Опалубка стен</a>
                                                         </h3>
@@ -230,7 +262,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Опалубка колонн</a>
                                                         </h3>
@@ -249,7 +281,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Опалубка перекрытий</a>
                                                         </h3>
@@ -286,7 +318,7 @@
                                             <a href="#">Комплектующие для опалубки</a>
                                             <div class="mega-menu">
                                                 <div class="mega-menu-bar">
-                                                    <div class="column column--can-break">
+                                                    <div class="column column--can-break has-submenu">
                                                         <h3>
                                                             <a href="#">Стяжной винт и гайки барашковые</a>
                                                         </h3>
@@ -317,7 +349,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column column--can-break">
+                                                    <div class="column column--can-break has-submenu">
                                                         <h3>
                                                             <a href="#">Замки для опалубки</a>
                                                         </h3>
@@ -361,7 +393,7 @@
                                             <a href="#">Расходные материалы</a>
                                             <div class="mega-menu">
                                                 <div class="mega-menu-bar">
-                                                    <div class="column column--can-break">
+                                                    <div class="column column--can-break has-submenu">
                                                         <h3>
                                                             <a href="#">Фиксаторы арматуры</a>
                                                         </h3>
@@ -402,7 +434,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Смазка для опалубки</a>
                                                         </h3>
@@ -427,7 +459,7 @@
                                             <a href="#">Опалубка Б.У.</a>
                                             <div class="mega-menu">
                                                 <div class="mega-menu-bar">
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Опалубка перекрытий БУ</a>
                                                         </h3>
@@ -451,7 +483,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Опалубка стен БУ</a>
                                                         </h3>
@@ -467,7 +499,7 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column has-submenu">
                                                         <h3>
                                                             <a href="#">Комплектующие для опалубки Б.У.</a>
                                                         </h3>
