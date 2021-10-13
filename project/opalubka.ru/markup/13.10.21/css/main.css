@@ -7887,7 +7887,15 @@ p {
     }
 
     .mobile-contacts-list {
-        display: block;
+        display: flex;
+        flex-basis: 50%;
+    }
+    .mobile-contact {
+        flex: 25% 0 1;
+    }
+    .mobile-contact svg {
+        max-width: 100%;
+        height: 30px;
     }
 
     .main-phones, .nav ul {
