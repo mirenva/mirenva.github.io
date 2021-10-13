@@ -7847,7 +7847,7 @@ p {
     }
 
     body {
-        padding-top: 112px
+        padding-top: 110px
     }
 
     .header {
@@ -7888,10 +7888,11 @@ p {
 
     .mobile-contacts-list {
         display: flex;
-        flex-basis: 50%;
+        flex: 50% 0 1;
     }
     .mobile-contact {
         flex: 25% 0 1;
+        display: flex;
     }
     .mobile-contact svg {
         max-width: 100%;
@@ -8272,6 +8273,10 @@ p {
     .logo {
         max-width: 160px;
     }
+    .main-menu-burger, .catalog-menu-burger {
+        width: 25px;
+        height: 20px;
+    }
 
     .main-slider__title {
         font-size: 24px;
@@ -8555,6 +8560,32 @@ p {
         min-height: 40px;
         justify-content: space-between;
         padding: 5px 15px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    body {
+        padding-top: 105px;
+    }
+    .main-menu-burger, .catalog-menu-burger {
+        width: 20px;
+        height: 16px;
+    }
+    .main-menu-burger span, .main-menu-burger::after, .main-menu-burger::before,
+    .catalog-menu-burger span, .catalog-menu-burger::after, .catalog-menu-burger::before {
+        height: 3px;
+    }
+    .toggle-btn {
+        font-size: 12px;
+    }
+    .toggle-btn:first-of-type .toggle-btn__title {
+        margin-left: 5px;
+    }
+    .toggle-btn:last-of-type .toggle-btn__title {
+        margin-right: 5px;
+    }
+    .mobile-contact svg {
+        height: 25px;
     }
 }
 
