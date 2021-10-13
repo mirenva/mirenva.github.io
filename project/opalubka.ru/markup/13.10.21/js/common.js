@@ -91,9 +91,11 @@ $((function() {
         if (targetTagName === 'A') {
             event.stopPropagation();
         } else {
-            const $submenus = $(".column.has-submenu");
-            $submenus.removeClass("active");
-            $submenus.children("ul").slideUp();
+            if (!$(this).children("ul").is(":visible")) {
+                const $submenus = $(".column.has-submenu");
+                $submenus.removeClass("active");
+                $submenus.children("ul").slideUp();
+            }
 
             $(this).toggleClass("active");
             $(this).children("ul").slideToggle();

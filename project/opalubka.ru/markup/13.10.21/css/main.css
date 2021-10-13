@@ -8118,7 +8118,6 @@ p {
     }
 
     .navigation li.dropdown > a {
-        width: calc(100% - 30px);
         padding-right: 0 !important
     }
 
@@ -8276,6 +8275,20 @@ p {
     .main-menu-burger, .catalog-menu-burger {
         width: 25px;
         height: 20px;
+    }
+    .navigation > li > a {
+        font-size: 16px;
+    }
+    .navigation li .mega-menu {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .navigation > li .mega-menu-bar h3 {
+        font-size: 16px;
+    }
+    .navigation .nav-arrow {
+        width: auto;
+        height: auto;
     }
 
     .main-slider__title {
@@ -8567,13 +8580,26 @@ p {
     body {
         padding-top: 105px;
     }
-    .main-menu-burger, .catalog-menu-burger {
+    .main-menu-burger,
+    .catalog-menu-burger {
         width: 20px;
         height: 16px;
     }
     .main-menu-burger span, .main-menu-burger::after, .main-menu-burger::before,
     .catalog-menu-burger span, .catalog-menu-burger::after, .catalog-menu-burger::before {
         height: 3px;
+    }
+    .main-menu-burger.open span,
+    .catalog-menu-burger.open span {
+        top: 0;
+        left: 25%;
+        width: 20px;
+    }
+    .main-menu-burger.open::after,
+    .catalog-menu-burger.open::after {
+        top: 90%;
+        left: 20%;
+        width: 20px;
     }
     .toggle-btn {
         font-size: 12px;
