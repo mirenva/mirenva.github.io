@@ -83,11 +83,11 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="header__mid-box">
-                                    <div class="toggle-btn js-toggle-main-menu">
-                                        <div class="main-menu-burger js-main-menu-burger">
+                                    <div class="toggle-btn js-toggle-catalog-menu">
+                                        <div class="catalog-menu-burger js-catalog-menu-burger">
                                             <span></span>
                                         </div>
-                                        <div class="toggle-btn__title js-main-menu-burger-title">Меню</div>
+                                        <div class="toggle-btn__title js-catalog-menu-burger-title">Каталог</div>
                                     </div>
 
                                     <a class="logo" href="#">
@@ -118,23 +118,31 @@
                                     </div>
 
                                     <div class="main-phones">
-                                        <a class="main-phones__item" href="tel:+74952348246">
+                                        <div class="main-phones__item">
                                             <svg class="svg svg--phone ">
                                                 <use xlink:href="img/svg/symbol/sprite.svg#phone"></use>
                                             </svg>
-                                            <span class="main-phones__item-box">Отдел аренды опалубки<b>+7 (495) 234-82-46</b></span>
-                                        </a>
-                                        <a class="main-phones__item" href="tel:+74952348237">
+                                            <span class="main-phones__item-box">
+                                                Отдел аренды опалубки
+                                                <a href="tel:+74952348246">+7 (495) 234-82-46</a>
+                                                <a href="tel:+79037296118">+7 (903) 729-61-18</a>
+                                            </span>
+                                        </div>
+                                        <div class="main-phones__item">
                                             <svg class="svg svg--phone ">
                                                 <use xlink:href="img/svg/symbol/sprite.svg#phone"></use>
                                             </svg>
-                                            <span class="main-phones__item-box">Отдел продаж опалубки<b>+7 (495) 234-82-37</b></span>
-                                        </a>
+                                            <span class="main-phones__item-box">
+                                                Отдел продаж опалубки
+                                                <a href="tel:+74952348237">+7 (495) 234-82-37</a>
+                                                <a href="tel:+74957299299">+7 (495) 729-92-99</a>
+                                            </span>
+                                        </div>
                                     </div>
 
-                                    <div class="toggle-btn js-toggle-catalog-menu">
-                                        <div class="toggle-btn__title js-catalog-menu-burger-title">Каталог</div>
-                                        <div class="catalog-menu-burger js-catalog-menu-burger">
+                                    <div class="toggle-btn js-toggle-main-menu">
+                                        <div class="toggle-btn__title js-main-menu-burger-title">Меню</div>
+                                        <div class="main-menu-burger js-main-menu-burger">
                                             <span></span>
                                         </div>
                                     </div>
@@ -664,14 +672,12 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="product-block__offset">
-                                <div class="prod-desc js-truncate-text-and-show-more" data-truncate-length="350">Стяжной
+                                <div class="prod-desc">Стяжной
                                     винт для опалубки представляет собой стальной стержень с
                                     резьбой, который служит для восприятия давления свежего бетона при заливке
-                                    монолитных конструкций, таких как фундаменты, колонны и стены. Так же известен как
-                                    стяжной болт, тяж или шпилька. Шпилька имеет резьбу по всей длине с шагом 10 мм. и
-                                    наружный диаметр 17 мм.
+                                    монолитных конструкций, таких как фундаменты, колонны и стены.
                                 </div>
-                                <span class="prod-show-full-desc js-scroll-to-full-product-desc" style="display: none">Подробнее</span>
+                                <span class="prod-show-full-desc js-scroll-to-full-product-desc">Подробнее</span>
                                 <div class="prod-options">
                                     <div class="prod-options__group">
                                         <div class="prod-options__group-title">Сталь</div>
@@ -683,9 +689,9 @@
                                     <div class="prod-options__group">
                                         <div class="prod-options__group-title">М.п.</div>
                                         <div class="prod-options__items">
-                                            <div class="prod-options__item active">до 200 м.п.</div>
+                                            <div class="prod-options__item active">от 500 м.п.</div>
                                             <div class="prod-options__item">200-500 м.п.</div>
-                                            <div class="prod-options__item">от 500 м.п.</div>
+                                            <div class="prod-options__item">до 200 м.п.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -731,8 +737,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="tabs__content active-tab">
-                                <div class="text-block text-block--partially-hidden">
+                            <div class="tabs__content active-tab js-product-description-tab">
+                                <div class="text-block">
                                     <h2>Винт стяжной для опалубки</h2>
                                     <p>Возведение монолитных конструкций, будь то многоэтажный дом или фундамент
                                         частного коттеджа, подразумевает использование строительной опалубки, в которой

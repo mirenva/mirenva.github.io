@@ -3514,9 +3514,8 @@ p {
     fill: var(--main-yellow-lighter)
 }
 
-.main-phones__item-box b {
+.main-phones__item-box a {
     display: block;
-    font-weight: 400
 }
 
 .catalog-menu-burger {
@@ -4443,7 +4442,7 @@ p {
     height: 50px;
     margin-top: -50px;
     position: relative;
-    background-image: linear-gradient(180deg,transparent,#fff);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1));
     background-position: bottom center;
     background-size: cover;
 }
@@ -6996,14 +6995,6 @@ p {
         color: var(--main-blue)
     }
 
-    .main-phones__item:hover {
-        color: var(--main-blue)
-    }
-
-    .main-phones__item:hover svg {
-        fill: currentColor
-    }
-
     .navigation .dropdown > a:hover svg {
         transform: rotate(180deg)
     }
@@ -7933,9 +7924,11 @@ p {
     .main-phones__item:last-of-type {
         margin-bottom: 10px;
     }
-
     .main-phones__item svg {
         display: none;
+    }
+    .main-phones__item-box a {
+        color: #fff
     }
 
     .toggle-btn {
