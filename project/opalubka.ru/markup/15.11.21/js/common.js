@@ -29,10 +29,6 @@ $((function() {
         $(this).addClass('active-tab').siblings().removeClass('active-tab').closest('.tabs').find('.tabs__content').removeClass('active-tab').eq($(this).index()).addClass('active-tab');
     }));
 
-    $('.prod-options__item').on('click', (function(event) {
-        $(this).toggleClass('active').siblings().removeClass('active');
-    }));
-
     function youtubeContent() {
         $('.video__item').each((function() {
             let $this = $(this), youtubeImgSrc = '//img.youtube.com/vi/' + $this.data('youtube') + '/hqdefault.jpg';
@@ -358,6 +354,49 @@ $((function() {
             }
         }
     }
+
+
+
+    const $mainProductOptions = $('.prod-options__group--main .prod-options__item');
+    const $subProductOptions = $('.prod-options__group--sub .prod-options__item');
+
+    const $productPriceElemNum = $('#product-price-num');
+    const $productPriceElemText = $('#product-price-text');
+
+    $mainProductOptions.first().addClass('active');
+    $subProductOptions.first().addClass('active');
+    setProductPrice($subProductOptions.first().data('price'));
+
+    $mainProductOptions.on('click', (function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        $subProductOptions.removeClass('visible active');
+
+        const propNum = $(this).data('property');
+        const $currentSubProductOptions = $subProductOptions.filter(`[data-property=${propNum}]`);
+        $currentSubProductOptions.addClass('visible');
+
+        const $firstCurrentSubProductOption = $currentSubProductOptions.first();
+        $firstCurrentSubProductOption.addClass('active');
+
+        setProductPrice($firstCurrentSubProductOption.data('price'));
+    }));
+
+    $subProductOptions.on('click', (function() {
+        const $this = $(this);
+        $this.addClass('active').siblings().removeClass('active');
+        setProductPrice($this.data('price'));
+    }));
+
+    function setProductPrice(price) {
+        if ($.isNumeric(price)) {
+            $productPriceElemText.hide();
+            $productPriceElemNum.show().find('#product-price-value').text(price);
+        } else {
+            $productPriceElemNum.hide();
+            $productPriceElemText.show().text(price);
+        }
+    }
+
 
     $('.preloader').length && $('.preloader').delay(200).fadeOut(500);
 }));

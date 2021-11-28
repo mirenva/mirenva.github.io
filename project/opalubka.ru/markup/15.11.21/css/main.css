@@ -4375,7 +4375,7 @@ p {
 }
 
 .prod-options__item {
-    display: inline-flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin-right: 5px;
@@ -4389,12 +4389,14 @@ p {
     border: 1px solid #777;
     transition: all .25s linear;
 }
-
 .prod-options__item:last-child {
     margin-right: 0
 }
-
-.prod-options__item.active, .prod-options__item:hover {
+.prod-options__item.visible {
+    display: inline-flex;
+}
+.prod-options__item.active,
+.prod-options__item:hover {
     color: #fff;
     background-color: var(--main-blue);
     border-color: var(--main-blue)

@@ -679,25 +679,35 @@
                                 </div>
                                 <span class="prod-show-full-desc js-scroll-to-full-product-desc">Подробнее</span>
                                 <div class="prod-options">
-                                    <div class="prod-options__group">
+                                    <div class="prod-options__group prod-options__group--main">
                                         <div class="prod-options__group-title">Сталь</div>
                                         <div class="prod-options__items">
-                                            <div class="prod-options__item active">Сталь 3</div>
-                                            <div class="prod-options__item">Сталь 20</div>
+                                            <div class="prod-options__item visible" data-property="1">Сталь 3</div>
+                                            <div class="prod-options__item visible" data-property="2">Сталь 20</div>
                                         </div>
                                     </div>
-                                    <div class="prod-options__group">
+                                    <div class="prod-options__group prod-options__group--sub">
                                         <div class="prod-options__group-title">М.п.</div>
                                         <div class="prod-options__items">
-                                            <div class="prod-options__item active">от 500 м.п.</div>
-                                            <div class="prod-options__item">200-500 м.п.</div>
-                                            <div class="prod-options__item">до 200 м.п.</div>
+                                            <!-- props group 1 -->
+                                            <div class="prod-options__item visible" data-property="1" data-price="170">от 500 м.п.</div>
+                                            <div class="prod-options__item visible" data-property="1" data-price="175">200-500 м.п.</div>
+                                            <div class="prod-options__item visible" data-property="1" data-price="180">до 200 м.п.</div>
+                                            <!-- props group 2 -->
+                                            <div class="prod-options__item" data-property="2" data-price="По запросу">от 500 м.п.</div>
+                                            <div class="prod-options__item" data-property="2" data-price="По запросу">200-500 м.п.</div>
+                                            <div class="prod-options__item" data-property="2" data-price="По запросу">до 200 м.п.</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="prod-actions row">
                                     <div class="col-sm-6">
-                                        <div class="prod-price">120 ₽ за м.п.</div>
+                                        <div class="prod-price">
+                                            <span id="product-price-num">
+                                                <span id="product-price-from" style="display:none">от </span><span id="product-price-value">120</span> ₽ за <span id="product-price-unit">м.п.</span>
+                                            </span>
+                                            <span id="product-price-text"></span>
+                                        </div>
                                         <div class="prod-status">
                                             <div class="prod-status__item prod-status__item--available">В наличии</div>
                                             <div class="prod-status__item prod-status__item--dis">Нет в наличии</div>
